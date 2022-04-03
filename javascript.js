@@ -35,7 +35,11 @@ function finalWinner() {
 function playerPlay() {
     let input = prompt("Please choose either rock, paper or scissors");
     input = input.toLowerCase();
-    return input;
+    
+    if (input === "rock" || input === "paper" || input === "scissors"){
+        return input;
+    } else {return playerPlay()}
+    
 }
 
 function computerPlay() {
